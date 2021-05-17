@@ -6,12 +6,12 @@ require 'pverify/version'
 Gem::Specification.new do |spec|
   spec.name          = "pverify"
   spec.version       = Pverify::VERSION
-  spec.authors       = ["Thanh Tam"]
-  spec.email         = ["dinhthanhtam.171@gmail.com"]
+  spec.authors       = ["Cerebral Inc., Viet Nguyen"]
+  spec.email         = ["viet.nguyen@getcerebral.com"]
 
-  spec.summary       = %q{Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{Write a longer description or delete this line.}
-  spec.homepage      = "https://github.com/koikichi171/pverefy-demo"
+  spec.summary       = %q{Pverify API wrapper.}
+  spec.description   = %q{A ruby library to interface with the Pverify API.}
+  spec.homepage      = "https://github.com/cerebral-inc/pverify"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
