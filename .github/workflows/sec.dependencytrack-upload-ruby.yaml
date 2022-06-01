@@ -5,15 +5,12 @@
 name: Generate CycloneDX SBOM and upload to Dependency-Track
 
 on:
-  push:
-    branches:
-      - main
-      - master
-      - INST-122
+  schedule:
+    - cron: '0 12 * * 0'
 
 jobs:
   security:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, Linux, X64]
     
     steps:
       - uses: actions/checkout@v2
