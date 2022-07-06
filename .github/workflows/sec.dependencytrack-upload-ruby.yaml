@@ -7,16 +7,22 @@ name: Generate CycloneDX SBOM and upload to Dependency-Track
 on:
   push:
     branches:
-      - main
-      - master
       - INST-122
+  schedule:
+    - cron: '0 12 * * 0'
 
 jobs:
   security:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, Linux, X64]
     
     steps:
       - uses: actions/checkout@v2
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.4.6
+      - name: Install dependencies
+        run: bundle install
       - name: Install Cyclonedx-ruby from RubyGems 
         run: sudo gem install cyclonedx-ruby 
       - name: Run Cyclonedx-ruby and generate SBOMs
