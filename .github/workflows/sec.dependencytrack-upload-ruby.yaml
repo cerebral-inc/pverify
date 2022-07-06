@@ -7,7 +7,7 @@ name: Generate CycloneDX SBOM and upload to Dependency-Track
 on:
   push:
     branches:
-      - main
+      - INST-122
   schedule:
     - cron: '0 12 * * 0'
 
